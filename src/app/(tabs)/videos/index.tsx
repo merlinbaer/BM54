@@ -1,15 +1,15 @@
 import { Link } from "expo-router";
 import { Button, StyleSheet, Text, View } from "react-native";
 
-export default function Index() {
+export default function Videos() {
   return (
     <View style={styles.container}>
-      <Text style={styles.textStyle}>Disclaimer</Text>
-        <Link href="/songs" replace asChild>
-          <Button title="Accept" />
+      <Text style={styles.textStyle}>Video List Screen</Text>
+      <Link href="/video" push asChild>
+        <Button title="Video Player" />
       </Link>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
