@@ -1,3 +1,4 @@
+import BMTabBar from '@/components/BMTabBar';
 import { Tabs } from 'expo-router';
 import React from 'react';
 
@@ -6,7 +7,15 @@ export default function TabsLayout() {
     <Tabs
       screenOptions={{
         headerShown: true,
-      }}>
+        tabBarStyle: {
+          height: 50, // gewünschte Höhe
+          paddingBottom: 0, // Safe Area ignorieren
+          backgroundColor: 'blue', // Farbe
+        },
+        tabBarActiveTintColor: 'white', // aktive Icons/Textfarbe
+        tabBarInactiveTintColor: 'gray', // inaktive Icons/Textfarbe
+      }}
+      tabBar={(props) => <BMTabBar {...props} />}>
       <Tabs.Screen
         name="concerts"
         options={{

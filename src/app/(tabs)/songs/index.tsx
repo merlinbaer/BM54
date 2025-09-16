@@ -1,7 +1,11 @@
+import { overlayStore$ } from '@/store/memory';
+import { observer } from '@legendapp/state/react';
 import { Link } from 'expo-router';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
-export default function Songs() {
+const Songs = observer(() => {
+  const isVisible = overlayStore$.visible.get();
+  const switchOverlay = () => overlayStore$.visible.set(!isVisible);
   return (
     <View style={styles.container}>
       <Text style={styles.textStyle}>Song Preview List Screen</Text>
@@ -11,9 +15,15 @@ export default function Songs() {
       <Link href="/bottom" push asChild>
         <Button title="Call bottom player" />
       </Link>
+      <Button
+        title={isVisible ? 'Bottom Player ausblenden' : 'Bottom Player einblenden'}
+        onPress={switchOverlay}
+      />
     </View>
   );
-}
+});
+
+export default Songs;
 
 const styles = StyleSheet.create({
   container: {
