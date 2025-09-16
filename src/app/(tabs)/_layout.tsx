@@ -1,4 +1,5 @@
 import BMTabBar from '@/components/BMTabBar';
+import { TAB_BAR_HEIGHT } from '@/constants/constants';
 import { Tabs } from 'expo-router';
 import React from 'react';
 
@@ -8,7 +9,7 @@ export default function TabsLayout() {
       screenOptions={{
         headerShown: true,
         tabBarStyle: {
-          height: 50, // gewünschte Höhe
+          height: TAB_BAR_HEIGHT, // gewünschte Höhe
           paddingBottom: 0, // Safe Area ignorieren
           backgroundColor: 'blue', // Farbe
         },

@@ -2,7 +2,8 @@
 import { OverlayState } from '@/type/types';
 import { observable } from '@legendapp/state';
 
-// Globaler Overlay-State
+// Bottom Player State
 export const overlayStore$ = observable<OverlayState>({
-  visible: true, // Start sichtbar
+  visible: false,
+  playerPadding: 20, // das untere Ende der scrollbaren Tab Fenster
 });
