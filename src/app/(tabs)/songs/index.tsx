@@ -21,11 +21,11 @@ const Songs = observer(() => {
       <Link href="/songs/songdetail" push asChild>
         <Button title="Song Detail" />
       </Link>
-      <Link href="/bottom" push asChild>
-        <Button title="Call bottom player" />
+      <Link href="/full" push asChild>
+        <Button title="Full Audio Player" />
       </Link>
       <Button
-        title={isVisible ? 'Bottom Player ausblenden' : 'Bottom Player einblenden'}
+        title={isVisible ? 'Bottom Player off' : 'Bottom Player on'}
         onPress={switchOverlay}
       />
       <FlatList

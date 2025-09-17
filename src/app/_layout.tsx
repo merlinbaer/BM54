@@ -18,17 +18,14 @@ export default function RootLayout() {
         }}
       />
       <Stack.Screen
-        name="(player)/bottom"
+        name="(player)/full"
         options={{
           title: '',
           presentation: 'modal',
           headerShown: false,
           contentStyle: {
             opacity: 0.9,
-            position: 'absolute',
-            bottom: 90,
-            left: 15,
-            right: 15,
+            bottom: 30, // TODO: insets.bottom
             borderRadius: 12,
           },
         }}
